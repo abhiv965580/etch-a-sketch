@@ -20,11 +20,20 @@ body {
     border: black solid 1px;
     min-height: 10px;
 }
-.btn{
+.grid-btn,#rainbow,#eraser,#default{
     text-align: center;
     height: 50px;
     width: max-content;
     background-color: cyan;
     color: red;
     border-radius: 10px;
+}
+#rainbow{
+    background: lightgreen;
+}
+#eraser{
+    background: white;
+}
+#default{
+    background: blue;
 }
