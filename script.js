@@ -8,8 +8,13 @@ const container = document.createElement('div');
 container.classList.add('container');
 body.appendChild(container);
 const containerBlock = document.querySelector('.container');
+const btnGrid = document.querySelector('.grid-btn');
+const rainbow = document.querySelector('#rainbow');
+const eraser = document.querySelector('#eraser');
+const def = document.querySelector('#default');
 
-function changeGridSize(newSize) {  //function to the change the size of grid
+//function to the change the size of grid
+const changeGridSize = (newSize) => {  
     let newRow = newSize;
     let newColumn = newSize;
     container.innerHTML = '';
@@ -25,7 +30,8 @@ function changeGridSize(newSize) {  //function to the change the size of grid
     }
 }
 
-function hoverEffect() {       //function that enables hover effect
+//function that enables hover effect
+const hoverEffect = () => {       
     const items = document.querySelectorAll('.col');
     items.forEach(item => {
     item.addEventListener('mouseover', () => {
@@ -34,7 +40,8 @@ function hoverEffect() {       //function that enables hover effect
 });
 }
 
-function rainbowEffect() { //function that enables rainbow effect
+//function that enables rainbow effect
+const rainbowEffect = () => { 
     let colors = ['red','blue','green','yellow','cyan','black','grey','brown','orange','purple','violet'];
     const items = document.querySelectorAll('.col');
     items.forEach(item => {
@@ -44,7 +51,8 @@ function rainbowEffect() { //function that enables rainbow effect
 });
 }
 
-function eraserEffect() {       //function that enables eraser effect
+//function that enables eraser effect
+const eraserEffect = () => {       
     const items = document.querySelectorAll('.col');
     items.forEach(item => {
     item.addEventListener('mouseover', () => {
@@ -53,26 +61,28 @@ function eraserEffect() {       //function that enables eraser effect
 });
 }
 
-function defaultEffect() { //function that enables default mode
+//function that enables default mode
+const defaultEffect = () => { 
     hoverEffect();
 }
-const btnGrid = document.querySelector('.grid-btn');
+
 btnGrid.addEventListener('click', () => {
     size = prompt("Enter the size of grid between 0 and 100:");
     changeGridSize(size);
     hoverEffect();
 });
-const rainbow = document.querySelector('#rainbow');
+
 rainbow.addEventListener('click', () => {
     rainbowEffect();
-})
-const eraser = document.querySelector('#eraser');
+});
+
 eraser.addEventListener('click',() => {
     eraserEffect();
-})
-const def = document.querySelector('#default');
+});
+
 def.addEventListener('click', () => {
     hoverEffect();
-})
+});
+
 changeGridSize(16);
 hoverEffect();
