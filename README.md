@@ -1,7 +1,7 @@
 # Description:
 This Repo introduces the Etch-A-Sketch project, which lets the user define the size of the grid and create sketches by dragging their mouse over a grid of squares that change colour.
 
-A screenshot has been attached to the PR for reference.
+A screenshot has been attached to the Repo for reference.
 
 Live Link: https://abhishek310001.github.io/etch-a-sketch/
 Project Link: https://www.theodinproject.com/lessons/foundations-etch-a-sketch
